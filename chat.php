@@ -12,7 +12,6 @@ foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line)
     [$k, $v] = explode('=', $line, 2);
     putenv(trim($k) . '=' . trim($v));
 }
-
 $pepper = getenv('APP_PEPPER');
 if ($pepper === false || strlen($pepper) < 32) {
     http_response_code(500);
@@ -213,6 +212,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
