@@ -17,7 +17,6 @@ if ($pepper === false || strlen($pepper) < 32) {
     http_response_code(500);
     die('Server misconfiguration.');
 }
-
 /* ================= Crypto (V2 ONLY) ================= */
 function deriveKeyV2(string $salt) {
     $pepper = getenv('APP_PEPPER');
@@ -212,6 +211,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
