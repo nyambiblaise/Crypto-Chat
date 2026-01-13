@@ -1,5 +1,6 @@
 <?php
 $envFile = dirname(__DIR__) . '/.env/.env';
+
 if (!is_readable($envFile)) {
     http_response_code(500);
     die('Server misconfiguration.');
@@ -212,5 +213,6 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
