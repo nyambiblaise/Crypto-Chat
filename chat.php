@@ -50,6 +50,7 @@ function decryptTextV2(string $cipherText, string $salt) {
         'SecureTextTool:v2'
     );
 }
+
 /* ================= API MODE ================= */
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajax'])) {
     header('Content-Type: application/json');
@@ -211,6 +212,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
