@@ -34,7 +34,6 @@ function encryptTextV2(string $plainText, string $salt) {
     $ct = openssl_encrypt($plainText, 'aes-256-gcm', $key, OPENSSL_RAW_DATA, $nonce, $tag, $aad, 16);
     return 'v2:' . base64_encode($nonce . $tag . $ct);
 }
-
 function decryptTextV2(string $cipherText, string $salt) {
     if (!str_starts_with($cipherText, 'v2:')) return false;
     $blob = base64_decode(substr($cipherText, 3), true);
@@ -212,6 +211,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
