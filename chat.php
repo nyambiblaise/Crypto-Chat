@@ -6,7 +6,6 @@ if (!is_readable($envFile)) {
     http_response_code(500);
     die('Server misconfiguration.');
 }
-
 foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
     $line = trim($line);
     if ($line === '' || $line[0] === '#' || !str_contains($line, '=')) continue;
@@ -210,6 +209,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
