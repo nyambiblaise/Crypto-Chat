@@ -24,7 +24,6 @@ function deriveKeyV2(string $salt) {
     $secret = $salt . "\n" . $pepper;
     return hash_pbkdf2('sha256', $secret, 'SecureTextTool:v2', 200000, 32, true);
 }
-
 function encryptTextV2(string $plainText, string $salt) {
     $key = deriveKeyV2($salt);
     $nonce = random_bytes(12);
@@ -211,6 +210,7 @@ window.onload=()=>{
 </div>
 </body>
 </html>
+
 
 
 
